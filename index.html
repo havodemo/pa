@@ -208,49 +208,62 @@ document.addEventListener("DOMContentLoaded", function() {
     <div class="bc-divider__motion" data-end="unset" data-duration="0.6" data-delay="0.2" data-trigger="this" data-ease="power1" data-scrub="false" data-type="fromLeft" data-width="100%" data-toggleActions="play none none none" data-animationType data-classTriggerClick="0" data-classTriggerHover="0">
     </div>
     </div><div id="brxe-yvbidc" class="brxe-text-basic"> Contact us now and own one in just a week!<br><strong>NB: We respond faster on Whatsapp.</strong> </div></div>
-    <div id="brxe-dgexfn" class="brxe-block bricks-lazy-hidden"><div id="brxe-xwrflx" class="brxe-block bricks-lazy-hidden">		<form data-script-id="qasxef" class="brxe-yjcsbj brxe-form contact-form" works="data-umami-event=&quot;Works from header clicked&quot;" method="post" data-element-id="qasxef" data-global-id="yjcsbj">
-			
-				<div class="form-group" role="group">
-				<input id="form-field-65c17b" name="form-field-1a54b0" aria-label="Name" spellcheck="false" type="text" value placeholder="Your Name *" required>
-				
-				
-							</div>
-				
-				<div class="form-group" role="group">
-				<input id="form-field-86d869" name="form-field-hwwrvv" aria-label="Phone" type="tel" value placeholder="Phone *" required>
-				
-				
-							</div>
-				
-				<div class="form-group" role="group">
-				<input id="form-field-3f3bb2" name="form-field-d6033b" aria-label="Email" type="email" value placeholder="Email *" required>
-				
-				
-							</div>
-				
-				<div class="form-group" role="group">
-				<input id="form-field-59ac95" name="form-field-iuexdh" aria-label="Company" spellcheck="false" type="text" value placeholder="Company/Organisation *" required>
-				
-				
-							</div>
-				
-				<div class="form-group" role="group">
-				
-								<textarea id="form-field-0f0f19" name="form-field-2c4688" aria-label="Message" spellcheck="false" placeholder="Briefly describe what you want *" required></textarea>
-				
-				
-							</div>
-				
-				<div role="group">
-				<input id="form-field-798507" name="form-field-fkqwek" type="hidden" value="102.176.94.5">
-				
-				
-							</div>
-				
-		  <div class="form-group submit-button-wrapper">
-				
-			</div>
-		</form>
+    <div id="brxe-dgexfn" class="brxe-block bricks-lazy-hidden"><div id="brxe-xwrflx" class="brxe-block bricks-lazy-hidden">		
+      <form id="whatsappForm" data-script-id="qasxef" class="brxe-yjcsbj brxe-form contact-form" method="post">  
+        <div class="form-group" role="group" aria-labelledby="label-1a54b0">
+            <input id="name" name="name" aria-label="Name" type="text" placeholder="Your Name *" spellcheck="false" required>
+        </div>
+        
+        <div class="form-group" role="group" aria-labelledby="label-hwwrvv">
+            <input id="phone" name="phone" aria-label="Phone" type="tel" placeholder="Phone *" required>
+        </div>
+        
+        <div class="form-group" role="group" aria-labelledby="label-d6033b">
+            <input id="email" name="email" aria-label="Email" type="email" placeholder="Email *" required>
+        </div>
+        
+        <div class="form-group" role="group" aria-labelledby="label-iuexdh">
+            <input id="company" name="company" aria-label="Company" type="text" placeholder="Company/Organisation *" spellcheck="false" required>
+        </div>
+        
+        <div class="form-group" role="group" aria-labelledby="label-2c4688">
+            <textarea id="message" name="message" aria-label="Message" placeholder="Briefly describe what you want havo to do for you *" spellcheck="false" required></textarea>
+        </div>
+    
+        <div class="form-group submit-button-wrapper">
+            <button type="submit" class="bricks-button xl">
+                <span class="text">Submit Form</span>
+            </button>
+        </div>
+    </form>
+    
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from refreshing the page
+    
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
+    
+            // WhatsApp number with country code
+            const whatsappNumber = "+233593117766";
+    
+            // Construct the WhatsApp message
+            const whatsappMessage = `Hello, I am ${name}.
+    Phone: ${phone}
+    Email: ${email}
+    Company: ${company}
+    Message: ${message}`;
+    
+            // Redirect to WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, '_blank');
+        });
+    </script>
+    
 		</div><div id="brxe-lxmwyb" class="brxe-block bricks-lazy-hidden">
       <h3 id="brxe-lmomrg" data-script-id="lmomrg" class="brxe-decode-reveal bc-decode-reveal">
         <span data-from-left class="bc-decode-reveal__element" data-hide data-delay="0" data-delayletters="0.03" data-decodealphabet="abcdefghijklmnopqrstuvwxyz1234567890!@#$^&amp;*()…æ_+-=;[]/~`" data-trigger="this" data-start="top bottom" data-disable-builder="0" data-animationType data-classTriggerClick="0" data-classTriggerHover="0">Accra ▪ Ghana<br> 5.603702° N/-0.187018° W<br><div id="ora"></div> <script>     function afiseazaOraLocala() {         var dataCurenta = new Date();         var ora = dataCurenta.getHours();         var minute = dataCurenta.getMinutes();          ora = ora < 10 ? '0' + ora : ora;         minute = minute < 10 ? '0' + minute : minute;          var timpulZilei = ora >= 12 ? 'PM' : 'AM';         var oraString = ora + ':' + minute + ' ' + timpulZilei + ' GMT';          document.getElementById("ora").innerHTML = oraString;     }      setInterval(afiseazaOraLocala, 1000); </script></span>
@@ -274,7 +287,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(afiseazaOraLocala, 1000);
 </script>
 </div><a id="brxe-vleujz" class="brxe-button workwithus bricks-button" href="mailto:hi@edunestghana.online">
-  <span class="__cf_email__">edunestghana@gmail.com</span>
+  <span class="__cf_email__">edunestgh@gmail.com</span>
   <i class="ti-arrow-top-right"></i>
 </a>
 <a id="brxe-xcxfji" class="brxe-button workwithus bricks-button" href="tel:+233209082349">+233 20 908 2349<i class="ti-arrow-top-right"></i></a></div></div></div></section></main><footer id="brx-footer"><section id="brxe-pfwlhg" class="brxe-section alb bricks-lazy-hidden"><div id="brxe-xfpawu" class="brxe-container bricks-lazy-hidden"><div id="brxe-gndmoz" class="brxe-block bricks-lazy-hidden"><h2 id="brxe-asjknp" class="brxe-heading"> Want to proudly display your institution to the world?</h2></div><div id="brxe-ucvllc" class="brxe-block bricks-lazy-hidden"><h2 id="brxe-musxeo" class="brxe-heading"><u>Contact Us Now</u></h2>
